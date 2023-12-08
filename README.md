@@ -10,7 +10,7 @@ Resources/crowdfunding.xlsx
   - initial file with crowdfunding data to load into SQL database
 
 # Jupyter File:
-ETL_Mini_Project_JPos_JCapra.ipynb
+ETL_Mini_Project_JPos_LDudley.ipynb
   - creates dataframe category
     - exports dataframe to file Resources/category.csv
     - columns:
