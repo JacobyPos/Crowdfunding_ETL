@@ -20,7 +20,8 @@ CREATE TABLE contacts (
 
 CREATE TABLE kickstarter_campaigns (
     cf_id SERIAL PRIMARY KEY,
-    contact_id INT REFERENCES contacts(contact_id),
+    contact_id INT NOT NULL,
+	FOREIGN KEY (contact_id) REFERENCES contacts(contact_id),
     company_name VARCHAR(255),
     description VARCHAR(255),
     goal FLOAT,
@@ -31,6 +32,12 @@ CREATE TABLE kickstarter_campaigns (
     currency VARCHAR(3),
     launched_date DATE,
     end_date DATE,
-    category_id VARCHAR(10) REFERENCES categories(category_id),
-    subcategory_id VARCHAR(10) REFERENCES subcategories(subcategory_id)
+    category_id	VARCHAR(10),
+	FOREIGN KEY (category_id) REFERENCES categories(category_id),
+    subcategory_id VARCHAR(10),
+	FOREIGN KEY (subcategory_id) REFERENCES subcategories(subcategory_id)
 );
+
+--DROP TABLE kickstarter_campaigns
+Select * from kickstarter_campaigns
+
