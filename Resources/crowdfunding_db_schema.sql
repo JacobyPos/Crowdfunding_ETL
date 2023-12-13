@@ -38,6 +38,11 @@ CREATE TABLE kickstarter_campaigns (
 	FOREIGN KEY (subcategory_id) REFERENCES subcategories(subcategory_id)
 );
 
---DROP TABLE kickstarter_campaigns
-Select * from kickstarter_campaigns
+SELECT * FROM categories;
+
+SELECT * FROM contacts;
+
+SELECT * FROM subcategories;
+
+SELECT * FROM kickstarter_campaigns
 
